@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController()
 public class AdminService implements AdminServiceGen {
 
-    @GetMapping(value = "/admin/userId")
+    @GetMapping(value = "/admin/{userId}")
     protected Boolean getUser(@PathVariable() String userId) {
         checkRequiredParametersOfGetUser(userId);
         throw new UnsupportedOperationException("Not implemented yet");
